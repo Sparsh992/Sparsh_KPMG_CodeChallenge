@@ -1,0 +1,9 @@
+>>>Open link - https://docs.microsoft.com/en-us/rest/api/compute/virtual-machines/get
+>>>Login to the Azre portal and create VM in subscription.
+>>>Use below get API call-
+
+GET https://management.azure.com/subscriptions/[subscriptionId]/resourceGroups/SparshRG/providers/Microsoft.Compute/virtualMachines/samplevm1?api-version=2021-07-01
+
+>>>>Authenticate using bearer toaken
+
+Run this call in postman or integrate with your code to get the VM details.
