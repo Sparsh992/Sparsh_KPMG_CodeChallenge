@@ -1,0 +1,64 @@
+{
+  "name": "demovm1",
+  "id": "/subscriptions/[subscriptionId]/resourceGroups/providers/Microsoft.Compute/virtualMachines/demovm1",
+  "type": "Microsoft.Compute/virtualMachines",
+  "location": "centralus",
+  "properties": {
+    "vmId": "",
+    "availabilitySet": {
+      "id": "/subscriptions/[subscriptionId]/resourceGroups/providers/Microsoft.Compute/availabilitySets/SAMPLE-AS"
+    },
+    "hardwareProfile": {
+      "vmSize": "Standard_DS1_v2"
+    },
+    "storageProfile": {
+      "imageReference": {
+        "publisher": "MicrosoftWindowsServer",
+        "offer": "WindowsServer",
+        "sku": "2016-Datacenter-Server-Core",
+        "version": "latest"
+      },
+      "osDisk": {
+        "osType": "Windows",
+        "name": "demovm1_OsDisk_1_12j322ki21111102c827e166a5aa0",
+        "createOption": "FromImage",
+        "caching": "ReadWrite",
+        "managedDisk": {
+          "storageAccountType": "StandardSSD_LRS",
+          "id": "/subscriptions/[subscriptionId]/resourceGroups/providers/Microsoft.Compute/disks/demo1_OsDisk_1_12j322ki21111102c827e166a5aa0"
+        },
+        "diskSizeGB": 127
+      },
+      "dataDisks": []
+    },
+    "osProfile": {
+      "computerName": "demovm1",
+      "adminUsername": "demovm1",
+      "windowsConfiguration": {
+        "provisionVMAgent": true,
+        "enableAutomaticUpdates": true,
+        "patchSettings": {
+          "patchMode": "AutomaticByOS",
+          "assessmentMode": "ImageDefault",
+          "enableHotpatching": false
+        }
+      },
+      "secrets": [],
+      "allowExtensionOperations": true,
+      "requireGuestProvisionSignal": true
+    },
+    "networkProfile": {
+      "networkInterfaces": [
+        {
+          "id": "/subscriptions/[subscriptionId]/resourceGroups/providers/Microsoft.Network/networkInterfaces"
+        }
+      ]
+    },
+    "diagnosticsProfile": {
+      "bootDiagnostics": {
+        "enabled": true
+      }
+    },
+    "provisioningState": "Succeeded"
+  }
+}
